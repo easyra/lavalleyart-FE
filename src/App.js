@@ -9,7 +9,6 @@ import PostPage from './components/PostPage';
 function App() {
   return (
     <div className='App'>
-      <Logo />
       <Navbar />
       <Switch>
         <Route exact strict path='/post/:id' component={PostPage} />
