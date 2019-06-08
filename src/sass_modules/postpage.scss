@@ -1,0 +1,64 @@
+.postpage {
+  margin: 4% 0;
+  .content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    @media screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+    .post {
+      max-width: 600px;
+      .thumbnail {
+        max-width: 400px;
+        width: 100%;
+        margin: 15px auto;
+        display: flex;
+      }
+      .title {
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+      }
+      .date {
+        font-size: 15px;
+        color: gray;
+        // margin-bottom: 15px;
+      }
+      .text {
+        padding: 15px;
+      }
+    }
+    .featured {
+      padding: 25px;
+      border-left: 1px solid lightgray;
+      @media screen and (max-width: 1000px) {
+        border-left: 0px solid lightgray;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .main-title {
+          display: none;
+        }
+        .card {
+          padding: 5px;
+        }
+      }
+      .main-title {
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .card {
+        max-width: 250px;
+        width: 100%;
+        margin: 15px 0;
+        .thumbnail {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
