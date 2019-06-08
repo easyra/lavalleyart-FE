@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './HomeContainer/Banner';
+import { Link } from 'react-router-dom';
 
 const HomeContainer = () => {
   const posts = [
@@ -36,7 +37,9 @@ const HomeContainer = () => {
                 <h3>{date}</h3>
                 <p>{text}</p>
               </div>
-              <div className='btn'>Read More</div>
+              <Link to={`/post/${id}`} className='btn'>
+                Read More
+              </Link>
             </div>
           );
         })}
