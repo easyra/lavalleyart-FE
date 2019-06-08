@@ -6,4 +6,20 @@ body,
 html {
   font-family: helvetica, sans-serif;
   font-size: 18px;
+  line-height: 1.25;
+}
+
+.btn {
+  padding: 8px;
+  // font-family: Helvetica;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 15px;
+  border: 1px solid rgba(160, 160, 159, 1);
+  width: max-content;
+  font-weight: bold;
+  transition: 0.4s all;
+  &:hover {
+    border: 1px solid black;
+  }
 }
