@@ -1,0 +1,68 @@
+.contact {
+  margin: 4% 0;
+  .content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+    .text {
+      padding: 15px;
+      width: 100%;
+      max-width: 500px;
+      line-height: 2;
+      font-size: 16px;
+      @media screen and (max-width: 1000px) {
+        text-align: center;
+      }
+      .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .socials {
+        margin: 15px 0 0;
+        width: 35%;
+        display: flex;
+        align-items: center;
+        .icon {
+          cursor: pointer;
+          margin-right: 15px;
+        }
+      }
+    }
+    .form {
+      padding: 15px;
+      input,
+      textarea {
+        font-family: Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 5px;
+        width: 100%;
+        margin: 5px 0;
+        border: 1px solid #000;
+        resize: none;
+      }
+      textarea {
+        height: 100%;
+        max-height: 300px;
+      }
+      .send {
+        margin-top: 15px;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 49%;
+        }
+      }
+    }
+  }
+}

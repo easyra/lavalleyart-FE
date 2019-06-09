@@ -5,6 +5,7 @@ import Logo from './components/Logo';
 import HomeContainer from './components/HomeContainer';
 import { Route, Switch } from 'react-router-dom';
 import PostPage from './components/PostPage';
+import ContactForm from './components/ContactForm';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact strict path='/post/:id' component={PostPage} />
+        <Route exact strict path='/contact-us' component={ContactForm} />
         <Route exact strict path='/' component={HomeContainer} />
       </Switch>
     </div>
