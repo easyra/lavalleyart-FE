@@ -2,6 +2,13 @@
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (max-width: 1000px) {
+    max-width: none;
+    // position: fixed;
+    background: #fff;
+    width: 100%;
+    // top: 0;
+  }
   .content {
     display: flex;
     justify-content: center;
@@ -11,6 +18,7 @@
       // justify-items: center;
       align-items: center;
       text-transform: uppercase;
+
       .nav-item {
         border-left: 1px solid #000;
         // width: 100%;
@@ -20,9 +28,33 @@
         font-weight: 750;
         text-align: center;
         line-height: 42px;
+        &.menu {
+          display: none;
+          border-left: 0px solid #000;
+        }
+        &.first {
+          border-left: 0px solid #000;
+        }
       }
-      .nav-item:first-child {
-        border-left: 0px solid #000;
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+        .nav-item {
+          display: none;
+          border: none;
+          width: 100%;
+          &.active {
+            display: inline-block;
+          }
+          &.menu {
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+          }
+        }
       }
     }
   }
