@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from './HomeContainer/Banner';
-import { Link } from 'react-router-dom';
+
+import PostCardList from './HomeContainer/PostCardList';
 
 const HomeContainer = () => {
   const posts = [
@@ -22,27 +23,7 @@ const HomeContainer = () => {
     <div className='home'>
       <Banner />
       <div className='content'>
-        {posts.map(({ title, date, text, id, thumbnail }) => {
-          if (text.length > 150) {
-            const textCopy = text.slice(0, 151);
-            text = textCopy.trim() + '...';
-          }
-          return (
-            <div className='card'>
-              <div className='thumbnail-container'>
-                <img className='thumbnail' src={thumbnail} />
-              </div>
-              <div className='text'>
-                <h2>{title}</h2>
-                <h3>{date}</h3>
-                <p>{text}</p>
-              </div>
-              <Link to={`/post/${id}`} className='btn'>
-                Read More
-              </Link>
-            </div>
-          );
-        })}
+        <PostCardList posts={posts} />
       </div>
     </div>
   );
