@@ -22,9 +22,7 @@ const HomeContainer = () => {
   return (
     <div className='home'>
       <Banner />
-      <div className='content'>
-        <PostCardList posts={posts} />
-      </div>
+      <PostCardList posts={posts} />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import React from 'react';
 
 const PostCardList = ({ posts }) => {
   return (
-    <>
+    <div className='post-list'>
       {posts.map(({ title, date, text, id, thumbnail }) => {
         if (text.length > 150) {
           const textCopy = text.slice(0, 151);
@@ -20,7 +20,7 @@ const PostCardList = ({ posts }) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };
 
