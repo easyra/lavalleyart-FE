@@ -6,6 +6,7 @@ import HomeContainer from './components/HomeContainer';
 import { Route, Switch } from 'react-router-dom';
 import PostPage from './components/PostPage';
 import ContactForm from './components/ContactForm';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact strict path='/contact-us' component={ContactForm} />
         <Route exact strict path='/' component={HomeContainer} />
       </Switch>
+      <Footer />
     </div>
   );
 }

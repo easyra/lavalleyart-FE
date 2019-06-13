@@ -33,4 +33,14 @@ a {
       border: none;
     }
   }
+  &.bold {
+    border-radius: 4px;
+    background: #fff;
+    color: #000;
+    font-size: 24px;
+    border: none;
+    &.hover {
+      border: none;
+    }
+  }
 }

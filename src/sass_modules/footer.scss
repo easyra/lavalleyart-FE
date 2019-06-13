@@ -1,0 +1,36 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 25px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  .content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      .btn {
+        margin-top: 15px;
+      }
+    }
+    .items {
+      .item {
+        margin: 15px 0;
+        cursor: pointer;
+        i {
+          margin-right: 5px;
+        }
+      }
+      .title {
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
