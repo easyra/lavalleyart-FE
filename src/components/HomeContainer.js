@@ -22,7 +22,40 @@ const HomeContainer = () => {
   return (
     <div className='home'>
       <Banner />
-      <PostCardList posts={posts} />
+      {/* <PostCardList posts={posts} /> */}
+      <div className='content'>
+        <div className='summary'>
+          <h4>What is LAVA?</h4>
+          <p className='text'>
+            The LA Valley Arts Collective is a group of friends helping friends
+            create. Whether its music, painting, animation, writing, dance,
+            film, comedy, or anything else, we want to work with you! We are
+            constantly looking for like-minded artistic individuals to showcase
+            their art and collaborate with.
+          </p>
+        </div>
+        <div className='socials'>
+          <h4>FIND US HERE</h4>
+          <div className='links'>
+            <div className='link'>
+              <i class='fab fa-facebook fa-2x' />
+              <div className='url'>/lavalleyart</div>
+            </div>
+            <div className='link'>
+              <i class='fab fa-instagram fa-2x' />
+              <div className='url'>/lavalleyart</div>
+            </div>
+            <div className='link'>
+              <i class='fab fa-youtube fa-2x' />
+              <div className='url'>/lavalleyart</div>
+            </div>
+            <div className='link'>
+              <i class='fab fa-itunes fa-2x' />
+              <div className='url'>/lavalleyart</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

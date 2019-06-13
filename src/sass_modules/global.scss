@@ -20,11 +20,17 @@ a {
   cursor: pointer;
   border-radius: 2px;
   font-size: 15px;
-  border: 1px solid rgba(160, 160, 159, 1);
+  border: 1px solid #fff;
   width: max-content;
   font-weight: bold;
   transition: 0.4s all;
-  &:hover {
-    border: 1px solid black;
+  &.cta {
+    background: #f79516;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    &.hover {
+      border: none;
+    }
   }
 }
