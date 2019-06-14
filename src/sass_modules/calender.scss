@@ -67,12 +67,15 @@
       .events {
         display: flex;
         flex-wrap: wrap;
-        // justify-content: space-around;
+
         .event {
           padding: 15px;
           display: flex;
-          max-width: 450px;
+          max-width: 400px;
           width: 100%;
+          @media screen and (max-width: 800px) {
+            max-width: none;
+          }
           cursor: pointer;
           border-radius: 4px;
           transition: all 0.2s;
