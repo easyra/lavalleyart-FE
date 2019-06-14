@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import EventList from './Calender/EventList';
+import PastEventList from './Calender/PastEventList';
 const Calender = () => {
+  const dummyData = [
+    {
+      cover:
+        'https://images.pexels.com/photos/2464638/pexels-photo-2464638.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+      date: 'Jun 13',
+      name: 'Event Name',
+      time: '11pm-12pm'
+    }
+  ];
+  for (let i = 0; i < 7; i++) {
+    dummyData.push(dummyData[0]);
+  }
+  const [events, setEvents] = useState(dummyData);
+
   return (
     <div className='calender'>
       <div className='content'>
         <div className='current'>
           <h2>Upcoming Events</h2>
-          <div className='events'>
-            <div className='event'>
-              <div className='cover-container'>
-                <img
-                  className='cover'
-                  src='https://images.pexels.com/photos/2464638/pexels-photo-2464638.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500'
-                  alt='Event Name'
-                />
-                <div className='date'>
-                  <div className='month'>Jun</div> 13
-                </div>
-              </div>
-
-              <div className='text'>
-                <h4 className='event-name'>Event Name</h4>
-                <div className='time'>11pm-12pm</div>
-              </div>
-            </div>
-          </div>
+          <EventList events={events} />
+        </div>
+        <div className='past'>
+          <h2>Past Events</h2>
+          <PastEventList events={events} />
         </div>
       </div>
     </div>

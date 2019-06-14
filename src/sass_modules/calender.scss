@@ -3,18 +3,76 @@
     max-width: 1000px;
     width: 100%;
     margin: auto;
+    h2 {
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      @media screen and (max-width: 1000px) {
+        text-align: center;
+      }
+    }
+    .past {
+      margin: 3% 0;
+
+      .events {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .event {
+          cursor: pointer;
+          display: flex;
+          max-width: 240px;
+          width: 100%;
+          position: relative;
+          margin: 5px;
+
+          &:hover {
+            .text {
+              opacity: 1;
+            }
+          }
+          .cover {
+            width: 100%;
+            max-height: 240px;
+            overflow: hidden;
+            object-fit: cover;
+            object-position: 50% 50%;
+          }
+          .text {
+            text-transform: uppercase;
+            transition: all 0.2s;
+            display: flex;
+            opacity: 0;
+            position: absolute;
+            font-weight: bold;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+            // text-align: center;
+            color: #fff;
+            background: rgba($color: #000000, $alpha: 0.4);
+            // display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
+      }
+    }
     .current {
       margin: 3% 0;
-      h2 {
-        font-size: 36px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-      }
+
       .events {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-around;
         .event {
           padding: 15px;
           display: flex;
+          max-width: 450px;
+          width: 100%;
           cursor: pointer;
           border-radius: 4px;
           transition: all 0.2s;
