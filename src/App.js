@@ -8,6 +8,7 @@ import PostPage from './components/PostPage';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Calender from './components/Calender';
+import Music from './components/Music';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact strict path='/post/:id' component={PostPage} />
         <Route exact strict path='/contact-us' component={ContactForm} />
         <Route exact strict path='/calender' component={Calender} />
+        <Route exact strict path='/music' component={Music} />
         <Route exact strict path='/' component={HomeContainer} />
       </Switch>
       <Footer />
