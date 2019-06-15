@@ -10,17 +10,7 @@
         display: none;
       }
     }
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-      @media screen and (max-width: 500px) {
-        text-align: center;
-      }
-      &:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
+
     .author {
       margin-bottom: 5px;
       @media screen and (max-width: 500px) {
@@ -32,6 +22,17 @@
       flex-wrap: wrap;
       justify-content: center;
       max-width: 700px;
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        @media screen and (max-width: 500px) {
+          text-align: center;
+        }
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
       .article {
         padding: 15px;
         display: flex;

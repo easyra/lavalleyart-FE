@@ -16,6 +16,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
+      <div className='wip'>This site is a work in progress</div>
       <Switch>
         <Route exact strict path='/post/:id' component={PostPage} />
         <Route exact strict path='/contact-us' component={ContactForm} />
