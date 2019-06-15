@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Calender from './components/Calender';
 import Music from './components/Music';
 import BlogPage from './components/BlogPage';
+import TVPage from './components/TVPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact strict path='/calender' component={Calender} />
         <Route exact strict path='/music' component={Music} />
         <Route exact strict path='/blog' component={BlogPage} />
+        <Route exact strict path='/tv' component={TVPage} />
         <Route exact strict path='/' component={HomeContainer} />
       </Switch>
       <Footer />
