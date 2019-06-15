@@ -1,0 +1,59 @@
+.blog {
+  .content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 3% auto 0;
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      @media screen and (max-width: 500px) {
+        text-align: center;
+      }
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .author {
+      margin-bottom: 5px;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+    .articles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      .article {
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        @media screen and (max-width: 500px) {
+          flex-wrap: wrap;
+        }
+        .text {
+          width: 100%;
+          p {
+            max-width: 600px;
+            @media screen and (max-width: 500px) {
+              display: none;
+            }
+          }
+        }
+        .thumbnail {
+          max-width: 250px;
+          width: 100%;
+          max-height: 250px;
+          object-fit: contain;
+          margin-right: 15px;
+          @media screen and (max-width: 500px) {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
