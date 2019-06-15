@@ -6,6 +6,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    .mixtape {
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
     .title {
       font-size: 24px;
       font-weight: bold;

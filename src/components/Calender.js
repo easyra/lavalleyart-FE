@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EventList from './Calender/EventList';
 import PastEventList from './Calender/PastEventList';
+import MixTapeCard from './Music/MixTapeCard';
 const Calender = () => {
   const dummyData = [
     {
@@ -20,8 +21,11 @@ const Calender = () => {
     <div className='calender'>
       <div className='content'>
         <div className='current'>
-          <h2>Upcoming Events</h2>
-          <EventList events={events} />
+          <div className='event-container'>
+            <h2>Upcoming Events</h2>
+            <EventList events={events} />
+          </div>
+          <MixTapeCard />
         </div>
         <div className='past'>
           <h2>Past Events</h2>
