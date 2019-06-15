@@ -3,6 +3,13 @@
     max-width: 1000px;
     width: 100%;
     margin: 3% auto 0;
+    display: flex;
+    justify-content: space-around;
+    .mixtape {
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
     .title {
       font-size: 24px;
       font-weight: bold;
@@ -24,17 +31,18 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      max-width: 700px;
       .article {
         padding: 15px;
         display: flex;
         justify-content: center;
+        align-items: flex-start;
         @media screen and (max-width: 500px) {
           flex-wrap: wrap;
         }
         .text {
           width: 100%;
           p {
-            max-width: 600px;
             @media screen and (max-width: 500px) {
               display: none;
             }

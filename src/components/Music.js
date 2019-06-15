@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ArtistsList from './Music/ArtistsList';
 import SongCard from './Music/SongCard';
 import SongList from './Music/SongList';
+import MixTapeCard from './Music/MixTapeCard';
 
 const Music = () => {
   const artists = [
@@ -20,10 +21,7 @@ const Music = () => {
     <div className='music'>
       <div className='content'>
         <ArtistsList artists={artists} />
-        <div className='mixtape'>
-          <h4 className='title'>OUR MIXTAPE</h4>
-          <SongList />
-        </div>
+        <MixTapeCard />
       </div>
     </div>
   );
