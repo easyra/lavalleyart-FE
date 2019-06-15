@@ -57,13 +57,13 @@ const Navbar = ({ match, history }) => {
           >
             blog
           </li>
-          <li
+          {/* <li
             id='podcast'
             onClick={handleClick}
             className={`nav-item ${showMobile && 'active'}`}
           >
             podcast
-          </li>
+          </li> */}
           <li
             id='contact-us'
             onClick={handleClick}
