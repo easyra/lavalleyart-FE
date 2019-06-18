@@ -3,15 +3,24 @@ import { withRouter } from 'react-router-dom';
 import Logo from './Logo';
 
 const Navbar = ({ match, history }) => {
+  const [showingDropDown, setShowingDropdown] = useState(false);
+  const [showMobile, setShowMobile] = useState(false);
   const handleClick = e => {
     const { id } = e.target;
     history.push(`/${id}`);
     setShowMobile(false);
   };
-  const showDropDown = () => {};
-  const [showMobile, setShowMobile] = useState(false);
   const menuClick = () => {
     setShowMobile(!showMobile);
+  };
+  const toggleDropDown = () => {
+    setShowingDropdown(!showingDropDown);
+  };
+  const hideDropDown = () => {
+    setShowingDropdown(false);
+  };
+  const showDropDown = () => {
+    setShowingDropdown(true);
   };
 
   return (
@@ -76,16 +85,20 @@ const Navbar = ({ match, history }) => {
           </li>
           <li
             id='social'
-            onClick={showDropDown}
+            onClick={toggleDropDown}
+            onMouseOver={showDropDown}
+            onMouseLeave={hideDropDown}
             className={`nav-item social ${showMobile && 'active'}`}
           >
             socials <i class='fas fa-caret-down' />
-            <div className='dropdown-content'>
-              <li>Facebook</li>
-              <li>Instagram</li>
-              <li>YouTube</li>
-              <li>iTunes</li>
-            </div>
+            {showingDropDown && (
+              <div className='dropdown-content'>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+                <li>iTunes</li>
+              </div>
+            )}
           </li>
         </ul>
       </nav>
