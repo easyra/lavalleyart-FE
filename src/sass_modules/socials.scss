@@ -1,0 +1,62 @@
+.socials-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  h4 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .links {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 1000px) {
+      flex-flow: row wrap;
+    }
+    .fa-facebook {
+      &:hover {
+        color: #3b5998;
+      }
+    }
+    .fa-instagram {
+      &:hover {
+        color: #3f729b;
+      }
+    }
+    .fa-youtube {
+      &:hover {
+        color: #ff0000;
+      }
+    }
+    .fa-itunes-note {
+      &:hover {
+        color: #ea4cc0;
+      }
+    }
+
+    .link {
+      margin-bottom: 15px;
+      @media screen and (max-width: 1000px) {
+        margin: 0 5px 0;
+      }
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      i {
+        transition: all 0.2s;
+      }
+      .url {
+        margin: 0 5px 0;
+        font-size: 22px;
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoCard from './TVPage/VideoCard';
 import MixTapeCard from './Music/MixTapeCard';
+import SocialCard from './HomeContainer/SocialCard';
 
 const TVPage = () => {
   return (
@@ -14,7 +15,7 @@ const TVPage = () => {
           allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
           allowfullscreen
         />
-        <MixTapeCard />
+        <SocialCard />
       </div>
       <div className='content'>
         <div className='video-feed'>

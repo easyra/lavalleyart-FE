@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './HomeContainer/Banner';
 
 import PostCardList from './HomeContainer/PostCardList';
+import SocialCard from './HomeContainer/SocialCard';
 
 const HomeContainer = () => {
   const posts = [
@@ -34,27 +35,7 @@ const HomeContainer = () => {
             their art and collaborate with.
           </p>
         </div>
-        <div className='socials'>
-          <h4>FIND US HERE</h4>
-          <div className='links'>
-            <div className='link'>
-              <i class='fab fa-facebook fa-2x' />
-              <div className='url'>/lavalleyart</div>
-            </div>
-            <div className='link'>
-              <i class='fab fa-instagram fa-2x' />
-              <div className='url'>/lavalleyart</div>
-            </div>
-            <div className='link'>
-              <i class='fab fa-youtube fa-2x' />
-              <div className='url'>/lavalleyart</div>
-            </div>
-            <div className='link'>
-              <i class='fab fa-itunes fa-2x' />
-              <div className='url'>/lavalleyart</div>
-            </div>
-          </div>
-        </div>
+        <SocialCard />
       </div>
     </div>
   );

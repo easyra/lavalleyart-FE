@@ -11,9 +11,14 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    .mixtape {
-      @media screen and (max-width: 1000px) {
-        display: none;
+    @media screen and(max-width: 1000px) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      .mixtape {
+        .container {
+          width: 100%;
+        }
       }
     }
 
