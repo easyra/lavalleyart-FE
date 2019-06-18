@@ -13,8 +13,9 @@ const Navbar = ({ match, history }) => {
   const menuClick = () => {
     setShowMobile(!showMobile);
   };
-  const toggleDropDown = () => {
-    setShowingDropdown(!showingDropDown);
+  const toggleDropDown = e => {
+    if (e.target.classList.contains('social'))
+      setShowingDropdown(!showingDropDown);
   };
   const hideDropDown = () => {
     setShowingDropdown(false);
