@@ -8,10 +8,12 @@ const Navbar = ({ match, history }) => {
     history.push(`/${id}`);
     setShowMobile(false);
   };
+  const showDropDown = () => {};
   const [showMobile, setShowMobile] = useState(false);
   const menuClick = () => {
     setShowMobile(!showMobile);
   };
+
   return (
     <header className='navbar'>
       <Logo handleClick={handleClick} />
@@ -64,12 +66,26 @@ const Navbar = ({ match, history }) => {
           >
             podcast
           </li> */}
+
           <li
             id='contact-us'
             onClick={handleClick}
             className={`nav-item last ${showMobile && 'active'}`}
           >
             contact us
+          </li>
+          <li
+            id='social'
+            onClick={showDropDown}
+            className={`nav-item social ${showMobile && 'active'}`}
+          >
+            socials <i class='fas fa-caret-down' />
+            <div className='dropdown-content'>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>YouTube</li>
+              <li>iTunes</li>
+            </div>
           </li>
         </ul>
       </nav>
