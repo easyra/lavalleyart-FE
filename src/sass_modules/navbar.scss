@@ -41,6 +41,15 @@
         }
         &.social {
           position: relative;
+          i {
+            transition: transform 0.2s;
+          }
+          &.show {
+            i {
+              transform: rotate(180deg);
+            }
+          }
+
           .dropdown-content {
             display: flex;
             transition: 'opacity' 0.1s;

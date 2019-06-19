@@ -89,7 +89,8 @@ const Navbar = ({ match, history }) => {
             onClick={toggleDropDown}
             onMouseOver={showDropDown}
             onMouseLeave={hideDropDown}
-            className={`nav-item social ${showMobile && 'active'}`}
+            className={`nav-item social ${showMobile &&
+              'active'} ${showingDropDown && 'show'}`}
           >
             socials <i class='fas fa-caret-down' />
             {showingDropDown && (
